@@ -203,7 +203,7 @@ function OrderPage() {
                                         </Row>
                                     </ListGroup.Item>
 
-                                    {!order.isPaid && (
+                                    {!order.isPaid && (order.user === userInfo._id) && (
                                         <ListGroup.Item>
                                             {loadingPay && (<Loader></Loader>)}
                                             {isPending ? (<Loader></Loader>) : (
